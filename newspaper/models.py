@@ -35,7 +35,7 @@ class Newspaper(models.Model):
     published_date = models.DateField(auto_now_add=True)
     topic = models.ForeignKey(
         Topic,
-        on_delete=models.SET_NULL,
+        on_delete=models.DO_NOTHING,
     )
 
     publishers = models.ManyToManyField(
